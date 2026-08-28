@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noise-Canceling Headset - Kenneth's Tech Shop</title>
+  <title>Active Noise-Canceling Headset - Kenneth's Tech Shop</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -48,14 +48,28 @@
 
         <br>
 
-        <p>
-          <label for="color">Choose Color:</label><br>
-          <select id="color" name="color">
-            <option value="black">Matte Black</option>
-            <option value="silver">Silver Gray</option>
-            <option value="navy">Midnight Blue</option>
-          </select>
-        </p>
+        <fieldset class="color-fieldset">
+          <legend><strong>Choose Color:</strong></legend>
+          <div class="color-options">
+            <label class="color-card">
+              <input type="radio" id="headset-black" name="color" value="black" checked required>
+              <img src="../images/headset-black.jpg" alt="Matte Black Headset">
+              <span>Matte Black</span>
+            </label>
+
+            <label class="color-card">
+              <input type="radio" id="headset-silver" name="color" value="silver">
+              <img src="../images/headset-silver.jpg" alt="Silver Gray Headset">
+              <span>Silver Gray</span>
+            </label>
+
+            <label class="color-card">
+              <input type="radio" id="headset-blue" name="color" value="blue">
+              <img src="../images/headset-blue.jpg" alt="Midnight Blue Headset">
+              <span>Midnight Blue</span>
+            </label>
+          </div>
+        </fieldset>
 
         <br>
 
