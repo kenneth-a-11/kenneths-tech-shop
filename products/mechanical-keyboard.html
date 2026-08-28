@@ -48,14 +48,28 @@
 
         <br>
 
-        <p>
-          <label for="switch-type">Switch Type:</label><br>
-          <select id="switch-type" name="switch-type">
-            <option value="red">Linear Red (Quiet)</option>
-            <option value="brown">Tactile Brown (Balanced)</option>
-            <option value="blue">Clicky Blue (Loud)</option>
-          </select>
-        </p>
+        <fieldset class="color-fieldset">
+          <legend><strong>Choose Switch Type:</strong></legend>
+          <div class="color-options">
+            <label class="color-card">
+              <input type="radio" id="switch-red" name="switch-type" value="red" checked required>
+              <img src="../images/switch-red.jpg" alt="Linear Red Switch">
+              <span>Linear Red (Quiet)</span>
+            </label>
+
+            <label class="color-card">
+              <input type="radio" id="switch-brown" name="switch-type" value="brown">
+              <img src="../images/switch-brown.jpg" alt="Tactile Brown Switch">
+              <span>Tactile Brown (Balanced)</span>
+            </label>
+
+            <label class="color-card">
+              <input type="radio" id="switch-blue" name="switch-type" value="blue">
+              <img src="../images/switch-blue.jpg" alt="Clicky Blue Switch">
+              <span>Clicky Blue (Loud)</span>
+            </label>
+          </div>
+        </fieldset>
 
         <br>
 
