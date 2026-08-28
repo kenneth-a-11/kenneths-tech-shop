@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mechanical Gaming Keyboard - Kenneth's Tech Shop</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Kenneth's Tech Shop</h1>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Mechanical Gaming Keyboard</h1>
+
+    <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800" alt="Mechanical Gaming Keyboard on a desk">
+
+    <section>
+      <h2>Product Description</h2>
+      <p>
+        Elevate your gaming and typing experience with this compact mechanical keyboard. Built with durable tactile switches, full N-key rollover, and dynamic RGB backlighting customizable per key.
+      </p>
+    </section>
+
+    <section>
+      <h2>Specifications</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Specification</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Switch Type</td>
+            <td>Tactile Mechanical Switches</td>
+          </tr>
+          <tr>
+            <td>Backlighting</td>
+            <td>Customizable RGB</td>
+          </tr>
+          <tr>
+            <td>Connectivity</td>
+            <td>USB-C Wired / 2.4GHz Wireless</td>
+          </tr>
+          <tr>
+            <td>Price</td>
+            <td>₱2,850.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ORDER ENQUIRY FORM -->
+    <section>
+      <h2>Order Enquiry</h2>
+      <form action="#" method="post">
+        
+        <p>
+          <label for="email">Contact Email:</label><br>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </p>
+
+        <br>
+
+        <p>
+          <label for="quantity">Quantity (1-20):</label><br>
+          <input type="number" id="quantity" name="quantity" min="1" max="20" value="1" required>
+        </p>
+
+        <fieldset>
+          <legend>Preferred Delivery Method</legend>
+          <p>
+            <input type="radio" id="standard" name="delivery" value="standard" checked>
+            <label for="standard">Standard Delivery (3-5 days)</label>
+          </p>
+          <p>
+            <input type="radio" id="express" name="delivery" value="express">
+            <label for="express">Express Courier (1-2 days)</label>
+          </p>
+          <p>
+            <input type="radio" id="pickup" name="delivery" value="pickup">
+            <label for="pickup">Store Pickup</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Optional Extras</legend>
+          <p>
+            <input type="checkbox" id="gift-wrap" name="extras" value="gift-wrapping">
+            <label for="gift-wrap">Gift Wrapping</label>
+          </p>
+          <p>
+            <input type="checkbox" id="warranty" name="extras" value="extended-warranty">
+            <label for="warranty">1-Year Extended Warranty</label>
+          </p>
+          <p>
+            <input type="checkbox" id="keycap-puller" name="extras" value="keycap-puller">
+            <label for="keycap-puller">Include Extra Keycap Puller</label>
+          </p>
+        </fieldset>
+
+        <br>
+
+        <p>
+          <button type="submit">Submit Order Enquiry</button>
+        </p>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Kenneth's Tech Shop. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
