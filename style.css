@@ -166,6 +166,51 @@ button[type="submit"]:hover {
   background-color: #2b6cb0;
 }
 
+/* Color Option Cards */
+.color-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.color-card {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  transition: all 0.2s ease-in-out;
+}
+
+.color-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.color-card span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.color-card:hover {
+  border-color: #cbd5e0;
+}
+
+.color-card:has(input:checked) {
+  border-color: #3182ce;
+  background-color: #ebf8ff;
+}
+
 /* Footer */
 footer {
   text-align: center;

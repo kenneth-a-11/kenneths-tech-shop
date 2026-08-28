@@ -48,13 +48,22 @@
 
         <br>
 
-        <p>
-          <label for="color">Choose Color:</label><br>
-          <select id="color" name="color">
-            <option value="black">Matte Black</option>
-            <option value="gray">Graphite Gray</option>
-          </select>
-        </p>
+        <fieldset class="color-fieldset">
+          <legend><strong>Choose Color:</strong></legend>
+          <div class="color-options">
+            <label class="color-card">
+              <input type="radio" id="color-black" name="color" value="black" checked required>
+              <img src="../images/mouse-black.jpg" alt="Matte Black Mouse">
+              <span>Matte Black</span>
+            </label>
+
+            <label class="color-card">
+              <input type="radio" id="color-gray" name="color" value="gray">
+              <img src="../images/mouse-gray.jpg" alt="Graphite Gray Mouse">
+              <span>Graphite Gray</span>
+            </label>
+          </div>
+        </fieldset>
 
         <br>
 
