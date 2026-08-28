@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Shop - Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Kenneth's Tech Shop</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <h1>My Shop</h1>
+    <h1>Kenneth's Tech Shop</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -19,51 +20,48 @@
   </header>
 
   <main>
-    <h2>Get in Touch</h2>
-    <p>Have questions or custom inquiries? Reach out to us using any of the methods below:</p>
-    <ul>
-      <li>Email: <a href="edwardkenneth.nunag@tup.edu.ph">edwardkenneth.nunag@tup.edu.ph</a></li>
-      <li>Phone: +63 993 244 6476</li>
-      <li>Location: Manila, Philippines</li>
-    </ul>
+    <h1>Contact Us</h1>
 
-    <form>
-      <fieldset>
-        <legend>Your details</legend>
+    <section>
+      <h2>Get in Touch</h2>
+      <p>Have questions about an order or need hardware recommendations? Send us a message or email us directly at <strong>support@kennethstechshop.com</strong>.</p>
+    </section>
 
+    <section>
+      <h2>Send a Message</h2>
+      <form action="#" method="post">
+        
         <p>
-          <label for="name">Name</label><br>
-          <input type="text" id="name" name="name" required>
+          <label for="name">Your Name:</label><br>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
         </p>
 
-        <p>
-          <label for="email">Email</label><br>
-          <input type="email" id="email" name="email" required>
-        </p>
+        <br>
 
         <p>
-          <label for="subject">Subject</label><br>
-          <select id="subject" name="subject" required>
-            <option value="" disabled selected>-- Select an option --</option>
-            <option value="product-question">Product Question</option>
-            <option value="order-status">Order Status</option>
-            <option value="wholesale-enquiry">Wholesale Enquiry</option>
-            <option value="something-else">Something Else</option>
-          </select>
+          <label for="email">Your Email:</label><br>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
         </p>
+
+        <br>
 
         <p>
-          <label for="message">Message</label><br>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
         </p>
 
-        <button type="submit">Send message</button>
-      </fieldset>
-    </form>
+        <br>
+
+        <p>
+          <button type="submit">Send Message</button>
+        </p>
+
+      </form>
+    </section>
   </main>
 
   <footer>
-    <p>© 2026 My Shop. All rights reserved.</p>
+    <p>&copy; 2026 Kenneth's Tech Shop. All rights reserved.</p>
   </footer>
 
 </body>

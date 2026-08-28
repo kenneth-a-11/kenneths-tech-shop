@@ -20,120 +20,66 @@
   </header>
 
   <main>
-    <h1>Wireless Ergonomic Mouse</h1>
-
-    <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800" alt="Black ergonomic wireless computer mouse on a dark desk surface">
-
-    <section>
-      <h2>Product Description</h2>
+    <section class="product-detail">
+      <h1>Wireless Ergonomic Mouse</h1>
+      <p><strong>Price:</strong> $49.99</p>
+      
+      <h3>Product Description</h3>
       <p>
-        Engineered specifically for developers, designers, and power users who spend long hours at their workstations. 
-        This ergonomic mouse features a natural vertical contour that reduces wrist strain and promotes a healthier posture during extended use.
+        Reduce wrist strain and work comfortably with our vertical ergonomic wireless mouse. Designed specifically for long hours of coding, browsing, and productivity.
       </p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li>Vertical sculpted grip to encourage natural hand posture</li>
+        <li>2.4GHz wireless connection + Bluetooth multi-device support</li>
+        <li>Adjustable DPI settings (800 / 1200 / 1600)</li>
+        <li>Long-lasting rechargeable USB-C battery</li>
+      </ul>
+
       <br>
-      <p>
-        Equipped with a high-precision optical sensor, multi-device Bluetooth connectivity, quiet-click switches, and a long-lasting rechargeable battery.
-      </p>
-    </section>
 
-    <section>
-      <h2>Specifications</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Specification</th>
-            <th>Detail</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>DPI Range</td>
-            <td>800 / 1200 / 1600 / 2400 DPI</td>
-          </tr>
-          <tr>
-            <td>Connectivity</td>
-            <td>2.4GHz Wireless / Bluetooth 5.0</td>
-          </tr>
-          <tr>
-            <td>Battery Life</td>
-            <td>Up to 70 days on a single charge</td>
-          </tr>
-          <tr>
-            <td>Price</td>
-            <td>₱1,299.00</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- ORDER ENQUIRY FORM SECTION -->
-    <section>
-      <h2>Order Enquiry</h2>
+      <h3>Order Form</h3>
       <form action="#" method="post">
-        
-        <!-- 1. Contact Email -->
         <p>
-          <label for="email">Contact Email:</label><br>
-          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <label for="quantity">Quantity:</label><br>
+          <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" required>
         </p>
 
         <br>
 
-        <!-- 2. Quantity Input -->
         <p>
-          <label for="quantity">Quantity (1-20):</label><br>
-          <input type="number" id="quantity" name="quantity" min="1" max="20" value="1" required>
+          <label for="color">Choose Color:</label><br>
+          <select id="color" name="color">
+            <option value="black">Matte Black</option>
+            <option value="gray">Graphite Gray</option>
+          </select>
         </p>
-
-        <!-- 3. Delivery Method Radios -->
-        <fieldset>
-          <legend>Preferred Delivery Method</legend>
-          
-          <p>
-            <input type="radio" id="standard" name="delivery" value="standard" checked>
-            <label for="standard">Standard Delivery (3-5 days)</label>
-          </p>
-
-          <p>
-            <input type="radio" id="express" name="delivery" value="express">
-            <label for="express">Express Courier (1-2 days)</label>
-          </p>
-
-          <p>
-            <input type="radio" id="pickup" name="delivery" value="pickup">
-            <label for="pickup">Store Pickup</label>
-          </p>
-        </fieldset>
-
-        <!-- 4. Optional Extras Checkboxes -->
-        <fieldset>
-          <legend>Optional Extras</legend>
-
-          <p>
-            <input type="checkbox" id="gift-wrap" name="extras" value="gift-wrapping">
-            <label for="gift-wrap">Gift Wrapping</label>
-          </p>
-
-          <p>
-            <input type="checkbox" id="warranty" name="extras" value="extended-warranty">
-            <label for="warranty">1-Year Extended Warranty</label>
-          </p>
-
-          <p>
-            <input type="checkbox" id="express-handling" name="extras" value="priority-handling">
-            <label for="express-handling">Priority Order Handling</label>
-          </p>
-        </fieldset>
 
         <br>
 
         <p>
-          <button type="submit">Submit Order Enquiry</button>
+          <label for="customer-name">Full Name:</label><br>
+          <input type="text" id="customer-name" name="customer-name" placeholder="Enter your full name" required>
         </p>
 
+        <br>
+
+        <p>
+          <label for="customer-email">Email Address:</label><br>
+          <input type="email" id="customer-email" name="customer-email" placeholder="you@example.com" required>
+        </p>
+
+        <br>
+
+        <p>
+          <button type="submit">Place Order</button>
+        </p>
       </form>
+      
+      <br>
+      <p><a href="../index.html">&larr; Back to Products</a></p>
     </section>
-
   </main>
 
   <footer>

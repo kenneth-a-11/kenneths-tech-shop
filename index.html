@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Kenneth's Tech Shop - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Kenneth's Tech Shop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -18,30 +20,33 @@
   </header>
 
   <main>
-    <section id="products">
-      <h2>Our Products</h2>
+    <section class="hero">
+      <h2>Welcome to Kenneth's Tech Shop</h2>
+      <p>Your one-stop destination for ergonomic and high-performance tech accessories.</p>
+    </section>
 
-      <article>
-        <h3>Wireless Ergonomic Mouse</h3>
-        <p>₱1,299.00</p>
-        <p>High-precision wireless optical mouse designed for comfortable long coding sessions.</p>
-        <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=400" alt="Black ergonomic wireless computer mouse on a dark desk surface">
-        <p><a href="products/ergonomic-mouse.html">View details</a></p>
-      </article>
+    <section class="products">
+      <h2>Featured Products</h2>
+      
+      <div class="product-grid">
+        <div class="product-card">
+          <h3>Wireless Ergonomic Mouse</h3>
+          <p>Price: $49.99</p>
+          <a href="products/ergonomic-mouse.html">View Details</a>
+        </div>
 
-      <article>
-        <h3>Mechanical Gaming Keyboard</h3>
-        <p>₱2,850.00</p>
-        <p>Compact mechanical keyboard with customizable RGB backlighting and tactile switches.</p>
-        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400" alt="Compact mechanical keyboard with colorful illuminated keys">
-      </article>
+        <div class="product-card">
+          <h3>Mechanical Keyboard</h3>
+          <p>Price: $89.99</p>
+          <a href="products/mechanical-keyboard.html">View Details</a>
+        </div>
 
-      <article>
-        <h3>Noise-Canceling HD Headset</h3>
-        <p>₱3,499.00</p>
-        <p>Over-ear wireless headphones with active noise cancellation and a crisp built-in microphone.</p>
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400" alt="Matte black wireless over-ear headphones sitting upright">
-      </article>
+        <div class="product-card">
+          <h3>Noise-Canceling Headset</h3>
+          <p>Price: $129.99</p>
+          <a href="products/noise-canceling-headset.html">View Details</a>
+        </div>
+      </div>
     </section>
   </main>
 
