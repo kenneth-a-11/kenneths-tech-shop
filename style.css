@@ -124,6 +124,16 @@ footer {
   margin-bottom: 1.5rem;
 }
 
+/* Distinct font-size and color on product names inside cards */
+.product-card h2,
+.product-card h3,
+.product-card .product-title {
+  font-size: 1.35rem;
+  color: var(--dark-ink);
+  margin-bottom: 0.5rem;
+  border-bottom: none;
+}
+
 /* Tables */
 table {
   width: 100%;
@@ -202,6 +212,14 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #2b6cb0;
+}
+
+/* 🎯 Required Focus State for Keyboard Accessibility */
+input:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid var(--brand-color);
+  outline-offset: 2px;
 }
 
 /* Color Option Cards */
