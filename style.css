@@ -138,14 +138,40 @@ footer {
   font-size: 1.75rem;
 }
 
-/* Product Cards */
+/* 🎯 MODULE 6.2 UPDATE: Side-by-Side Responsive Product Grid */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
 .product-card {
   background-color: #ffffff;
   border: 1px solid var(--muted-grey);
   border-left: 4px solid var(--brand-color);
   padding: 1.5rem;
   border-radius: 8px;
-  margin-bottom: 1.5rem;
+  
+  /* Flex item rule to enable responsive multi-column layout */
+  flex: 1 1 240px;
+  
+  /* Keep internal card elements stacked vertically */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure images fill the card properly */
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Align links cleanly at the bottom of each card */
+.product-card a {
+  margin-top: auto;
 }
 
 /* Distinct font-size and color on product names inside cards */
