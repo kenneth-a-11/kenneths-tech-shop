@@ -58,28 +58,33 @@ header, main, footer {
   padding: 0 1.5rem;
 }
 
+/* 🎯 MODULE 6.1 UPDATE: Rebuilt Header with Flexbox */
 header {
   background-color: #1a202c;
   color: #ffffff;
   padding: 1.5rem;
   border-radius: 0 0 8px 8px;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
-/* Navigation styled with inline-block per assignment instructions */
+/* 🎯 MODULE 6.1 UPDATE: Nav transformed from inline-block to Flexbox */
 nav ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  gap: 20px;
 }
 
 nav li {
-  display: inline-block;
-  margin-right: 1rem;
+  margin-right: 0; /* Cleared old inline-block margin */
 }
 
 nav a {
@@ -113,6 +118,25 @@ footer {
 /* ==========================================================================
    4. COMPONENTS
    ========================================================================== */
+
+/* 🎯 MODULE 6.1 UPDATE: Perfect Centering Technique (Lesson 6.4) */
+.hero-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  background-color: #edf2f7;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.hero-banner h2 {
+  border-bottom: none;
+  margin-bottom: 0;
+  font-size: 1.75rem;
+}
 
 /* Product Cards */
 .product-card {
@@ -214,7 +238,7 @@ button[type="submit"]:hover {
   background-color: #2b6cb0;
 }
 
-/* 🎯 Required Focus State for Keyboard Accessibility */
+/* Required Focus State for Keyboard Accessibility */
 input:focus,
 textarea:focus,
 button:focus {
