@@ -119,12 +119,12 @@ footer {
    4. COMPONENTS
    ========================================================================== */
 
-/* 🎯 MODULE 6.1 UPDATE: Perfect Centering Technique (Lesson 6.4) */
-.hero-banner {
+.hero {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 200px;
+  min-height: 180px;
   background-color: #edf2f7;
   border-radius: 8px;
   margin-bottom: 2rem;
@@ -132,9 +132,9 @@ footer {
   padding: 1.5rem;
 }
 
-.hero-banner h2 {
+.hero h2 {
   border-bottom: none;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
   font-size: 1.75rem;
 }
 
