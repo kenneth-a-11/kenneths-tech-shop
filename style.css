@@ -117,9 +117,6 @@ nav a:hover {
   color: #ffffff;
 }
 
-/* ==========================================================================
-   SIDEBAR FIX (Targeting <aside> directly)
-   ========================================================================== */
 aside {
   background-color: #ffffff !important;
   padding: 1.5rem !important;
