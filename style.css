@@ -104,17 +104,18 @@ nav a:hover {
 
 /* Sidebar Region (<aside>) */
 aside {
-  background: #ffffff;
+  background-color: #ffffff;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   border: 1px solid #e2e8f0;
 }
 
+/* Headings */
 aside h3 {
   font-size: 1.1rem;
-  color: var(--brand-color);
-  margin-bottom: 0.5rem;
+  color: var(--brand-color, #3182ce);
+  margin-bottom: 0.75rem;
   margin-top: 1.25rem;
 }
 
@@ -122,29 +123,36 @@ aside h3:first-child {
   margin-top: 0;
 }
 
+/* Remove default list padding/bullets and add vertical spacing */
 aside ul {
   list-style: none;
-  margin-bottom: 1rem;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
 }
 
 aside li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
+/* Clean up link styling */
 aside a {
-  color: var(--dark-ink);
+  color: var(--dark-ink, #2d3748);
   text-decoration: none;
   font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: color 0.2s ease;
 }
 
 aside a:hover {
-  color: var(--brand-color);
-  text-decoration: underline;
+  color: var(--brand-color, #3182ce);
 }
 
+/* Store hours text styling */
 aside p {
   font-size: 0.875rem;
   color: #718096;
+  margin-bottom: 0.25rem;
 }
 
 /* Main Content Region */
