@@ -2,10 +2,10 @@
    1. VARIABLES
    ========================================================================== */
 :root {
-  --brand-color: #3182ce;       /* Brand accent */
-  --dark-ink: #2d3748;          /* Text color */
-  --muted-grey: #cbd5e0;        /* Borders and secondary text */
-  --light-bg: #f7fafc;          /* Light background */
+  --brand-color: #3182ce;
+  --dark-ink: #2d3748;
+  --muted-grey: #cbd5e0;
+  --light-bg: #f7fafc;
 }
 
 /* ==========================================================================
@@ -22,14 +22,12 @@ body {
   line-height: 1.6;
   color: var(--dark-ink);
   background-color: var(--light-bg);
-  padding: 1.5rem 1rem 2rem;
+  padding: 1rem;
 }
 
-/* Base Headings & Structural Typography */
 h1 {
-  font-size: 2rem;
-  color: #1a202c;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 h2 {
@@ -40,21 +38,17 @@ h2 {
   padding-bottom: 0.25rem;
 }
 
-/* Base Images */
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
   display: block;
 }
 
-
 /* ==========================================================================
-   3. LAYOUT REGIONS (🎯 MODULE 7.2 UPDATE: Mobile-First Grid Layout)
+   3. LAYOUT REGIONS (MODULE 7.2: Mobile-First CSS Grid Skeleton)
    ========================================================================== */
 
-/* 📱 Base: Mobile Layout (Single column, everything stacked) */
+/* Base: Mobile Layout (Single column, stacked vertically) */
 .page {
   display: grid;
   grid-template-columns: 1fr;
@@ -68,13 +62,12 @@ img {
   margin: 0 auto;
 }
 
-/* Named Grid Area Assignments */
 header { grid-area: masthead; }
 aside  { grid-area: side; }
 main   { grid-area: main; }
 footer { grid-area: foot; }
 
-/* 💻 Enhance at Tablet & Desktop (700px and up) */
+/* Tablet & Desktop Layout (700px and up) */
 @media (min-width: 700px) {
   .page {
     grid-template-columns: 220px 1fr;
@@ -85,14 +78,14 @@ footer { grid-area: foot; }
   }
 }
 
-/* Header Component (Mobile-friendly Flexbox) */
+/* Header Component */
 header {
   background-color: #1a202c;
   color: #ffffff;
   padding: 1.25rem;
   border-radius: 8px;
   display: flex;
-  flex-direction: column; /* Stack logo and nav vertically on tiny screens */
+  flex-direction: column;
   gap: 1rem;
   align-items: center;
   text-align: center;
@@ -100,16 +93,10 @@ header {
 
 @media (min-width: 600px) {
   header {
-    flex-direction: row; /* Switch to side-by-side header on larger screens */
+    flex-direction: row;
     justify-content: space-between;
     text-align: left;
   }
-}
-
-header h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0;
-  color: #ffffff;
 }
 
 nav ul {
@@ -118,11 +105,10 @@ nav ul {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 nav a {
-  color: var(--muted-grey, #cbd5e0);
+  color: var(--muted-grey);
   text-decoration: none;
   font-weight: 500;
 }
@@ -131,8 +117,62 @@ nav a:hover {
   color: #ffffff;
 }
 
-/* Sidebar Region (<aside>) */
+/* ==========================================================================
+   SIDEBAR FIX (Targeting <aside> directly)
+   ========================================================================== */
 aside {
+  background-color: #ffffff !important;
+  padding: 1.5rem !important;
+  border-radius: 8px !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  height: fit-content;
+}
+
+aside h3 {
+  font-size: 1.1rem !important;
+  color: var(--brand-color) !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+  border-bottom: none !important;
+}
+
+aside h3:first-child {
+  margin-top: 0 !important;
+}
+
+aside ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 1.25rem 0 !important;
+}
+
+aside li {
+  margin-bottom: 0.5rem !important;
+}
+
+aside a {
+  color: var(--dark-ink) !important;
+  text-decoration: none !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+}
+
+aside a:hover {
+  color: var(--brand-color) !important;
+  text-decoration: underline !important;
+}
+
+aside p {
+  font-size: 0.875rem !important;
+  color: #718096 !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* ==========================================================================
+   MAIN CONTENT & COMPONENTS
+   ========================================================================== */
+main {
   background: #ffffff;
   padding: 1.5rem;
   border-radius: 8px;
@@ -140,68 +180,25 @@ aside {
   border: 1px solid #e2e8f0;
 }
 
-aside h3 {
-  font-size: 1.1rem;
-  color: var(--brand-color, #3182ce);
-  margin-bottom: 0.75rem;
-  margin-top: 1.25rem;
-}
-
-aside h3:first-child {
-  margin-top: 0;
-}
-
-aside ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.25rem 0;
-}
-
-aside li {
-  margin-bottom: 0.5rem;
-}
-
-aside a {
-  color: var(--dark-ink, #2d3748);
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-aside a:hover {
-  color: var(--brand-color, #3182ce);
-}
-
-aside p {
-  font-size: 0.875rem;
-  color: #718096;
-  margin-bottom: 0.25rem;
-}
-
-/* Main Content Region */
-main {
-  background: #ffffff;
-  padding: 1.5rem;
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 140px;
+  background-color: #edf2f7;
   border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-section {
   margin-bottom: 2rem;
-}
-
-footer {
   text-align: center;
-  margin-top: 1rem;
-  color: #718096;
-  font-size: 0.875rem;
+  padding: 1.5rem;
 }
 
-/* ==========================================================================
-   4. COMPONENTS (Responsive Product Grid)
-   ========================================================================== */
+.hero h2 {
+  border-bottom: none;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
 
-/* Dynamic Grid/Flex container for cards */
 .product-grid {
   display: flex;
   flex-wrap: wrap;
@@ -210,15 +207,12 @@ footer {
 
 .product-card {
   background-color: #ffffff;
-  border: 1px solid var(--muted-grey, #cbd5e0);
-  border-left: 4px solid var(--brand-color, #3182ce);
+  border: 1px solid var(--muted-grey);
+  border-left: 4px solid var(--brand-color);
   padding: 1.25rem;
   border-radius: 8px;
-  
-  /* Flexible growth with min-width guard */
-  flex: 1 1 220px;
-  width: 100%; /* Prevents horizontal overflowing on tiny displays */
-  
+  flex: 1 1 200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -233,14 +227,21 @@ footer {
 
 .product-card h3 {
   font-size: 1.2rem;
-  color: var(--dark-ink, #2d3748);
+  color: var(--dark-ink);
   margin-bottom: 0.5rem;
   border-bottom: none;
 }
 
 .product-card a {
   margin-top: auto;
-  color: var(--brand-color, #3182ce);
+  color: var(--brand-color);
   font-weight: 600;
   text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 1rem;
+  color: #718096;
+  font-size: 0.875rem;
 }
