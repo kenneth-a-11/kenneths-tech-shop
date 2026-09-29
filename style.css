@@ -50,14 +50,19 @@ img {
 }
 
 
-/* Page Skeleton Container */
+/* ==========================================================================
+   3. LAYOUT REGIONS (🎯 MODULE 7.2 UPDATE: Mobile-First Grid Layout)
+   ========================================================================== */
+
+/* 📱 Base: Mobile Layout (Single column, everything stacked) */
 .page {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "masthead masthead"
-    "side     main"
-    "foot     foot";
+    "masthead"
+    "main"
+    "side"
+    "foot";
   gap: 16px;
   max-width: 1100px;
   margin: 0 auto;
@@ -69,14 +74,36 @@ aside  { grid-area: side; }
 main   { grid-area: main; }
 footer { grid-area: foot; }
 
+/* 💻 Enhance at Tablet & Desktop (700px and up) */
+@media (min-width: 700px) {
+  .page {
+    grid-template-columns: 220px 1fr;
+    grid-template-areas:
+      "masthead masthead"
+      "side     main"
+      "foot     foot";
+  }
+}
+
+/* Header Component (Mobile-friendly Flexbox) */
 header {
   background-color: #1a202c;
   color: #ffffff;
-  padding: 1.5rem;
+  padding: 1.25rem;
   border-radius: 8px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Stack logo and nav vertically on tiny screens */
+  gap: 1rem;
   align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  header {
+    flex-direction: row; /* Switch to side-by-side header on larger screens */
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 
 header h1 {
@@ -89,11 +116,13 @@ nav ul {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 nav a {
-  color: var(--muted-grey);
+  color: var(--muted-grey, #cbd5e0);
   text-decoration: none;
   font-weight: 500;
 }
@@ -104,14 +133,13 @@ nav a:hover {
 
 /* Sidebar Region (<aside>) */
 aside {
-  background-color: #ffffff;
+  background: #ffffff;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   border: 1px solid #e2e8f0;
 }
 
-/* Headings */
 aside h3 {
   font-size: 1.1rem;
   color: var(--brand-color, #3182ce);
@@ -123,7 +151,6 @@ aside h3:first-child {
   margin-top: 0;
 }
 
-/* Remove default list padding/bullets and add vertical spacing */
 aside ul {
   list-style: none;
   padding: 0;
@@ -134,21 +161,17 @@ aside li {
   margin-bottom: 0.5rem;
 }
 
-/* Clean up link styling */
 aside a {
   color: var(--dark-ink, #2d3748);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
-  display: inline-block;
-  transition: color 0.2s ease;
 }
 
 aside a:hover {
   color: var(--brand-color, #3182ce);
 }
 
-/* Store hours text styling */
 aside p {
   font-size: 0.875rem;
   color: #718096;
@@ -158,7 +181,7 @@ aside p {
 /* Main Content Region */
 main {
   background: #ffffff;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
@@ -175,42 +198,26 @@ footer {
 }
 
 /* ==========================================================================
-   4. COMPONENTS (Flexbox Preserved)
+   4. COMPONENTS (Responsive Product Grid)
    ========================================================================== */
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 180px;
-  background-color: #edf2f7;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-.hero h2 {
-  border-bottom: none;
-  margin-bottom: 0.5rem;
-  font-size: 1.75rem;
-}
-
+/* Dynamic Grid/Flex container for cards */
 .product-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
 }
 
 .product-card {
   background-color: #ffffff;
-  border: 1px solid var(--muted-grey);
-  border-left: 4px solid var(--brand-color);
-  padding: 1.5rem;
+  border: 1px solid var(--muted-grey, #cbd5e0);
+  border-left: 4px solid var(--brand-color, #3182ce);
+  padding: 1.25rem;
   border-radius: 8px;
   
-  flex: 1 1 200px;
+  /* Flexible growth with min-width guard */
+  flex: 1 1 220px;
+  width: 100%; /* Prevents horizontal overflowing on tiny displays */
   
   display: flex;
   flex-direction: column;
@@ -224,20 +231,16 @@ footer {
   margin-bottom: 1rem;
 }
 
-.product-card a {
-  margin-top: auto;
-  color: var(--brand-color);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.product-card a:hover {
-  text-decoration: underline;
-}
-
 .product-card h3 {
   font-size: 1.2rem;
-  color: var(--dark-ink);
+  color: var(--dark-ink, #2d3748);
   margin-bottom: 0.5rem;
   border-bottom: none;
+}
+
+.product-card a {
+  margin-top: auto;
+  color: var(--brand-color, #3182ce);
+  font-weight: 600;
+  text-decoration: none;
 }
