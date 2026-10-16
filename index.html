@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home - Kenneth's Tech Shop</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,">
+  <script src="script.js"></script>
 </head>
 <body>
 
   <div class="page">
 
     <header>
-      <h1>Kenneth's Tech Shop</h1>
+      <h1 id="shop-name">Kenneth's Tech Shop</h1>
       <nav>
         <ul>  
           <li><a href="index.html">Home</a></li>
@@ -38,8 +40,10 @@
 
     <main>
       <section class="hero">
-        <h2>Welcome to Kenneth's Tech Shop</h2>
-        <p>Your one-stop destination for ergonomic and high-performance tech accessories.</p>
+      <h2>Welcome to Kenneth's Tech Shop</h2>
+       <p>Your one-stop destination for ergonomic and high-performance tech accessories.</p>
+        <p id="product-count"></p>
+         <p id="catalog-total"></p>
       </section>
 
       <section class="products">
@@ -70,11 +74,12 @@
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Kenneth's Tech Shop. All rights reserved.</p>
+        <footer>
+      <p id="copyright">&copy; 2026 Kenneth's Tech Shop. All rights reserved.</p>
     </footer>
 
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
